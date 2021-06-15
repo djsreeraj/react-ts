@@ -1,9 +1,9 @@
-import './App.css';
+import Todo from './Todo';
 
 function App() {
   return (
     <div>
-      React Typescript app
+        <Todo items = {['learn TS', 'Learn React' ]}  />
     </div>
   );
 }
