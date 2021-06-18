@@ -2,9 +2,15 @@ import { FC } from 'react';
 import Todo from './../models/todo';
 import classes from './TodoItem.module.css'
 
-const TodoItem: FC<{ todo: Todo}> = (props) => {
+const TodoItem: FC<{ todo: Todo, onRemoveTodo: () => void }> = (props) => {
+    // const deleteHandler = (id: string) => {
+
+    // }
     return (
-        <li className={classes.item} key={props.todo.id}>{props.todo.text}</li>
+        <li className={classes.item} 
+             onClick={props.onRemoveTodo} 
+             key={props.todo.id}>{props.todo.text}
+        </li>
     )
 }
 

@@ -15,10 +15,20 @@ function App() {
       })
   }
 
+  const removeTodoHandler = (item: string) => {
+    // let list = todos;
+    // list.slice(list.findIndex(x => x.id === item),1);
+    // setTodos(list);    
+    console.log('test');
+    setTodos((prevTodos) => {
+      return prevTodos.filter(todo => todo.id !== item)
+    });
+  };
+
   return (
     <div>
         <NewTodo onAddTodo={addTodoHandler}/>
-        <Todos items = {todos}  />
+        <Todos items = {todos} onRemoveTodo={removeTodoHandler} />
     </div>
   );
 }
