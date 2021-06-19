@@ -3,9 +3,6 @@ import Todo from './../models/todo';
 import classes from './TodoItem.module.css'
 
 const TodoItem: FC<{ todo: Todo, onRemoveTodo: () => void }> = (props) => {
-    // const deleteHandler = (id: string) => {
-
-    // }
     return (
         <li className={classes.item} 
              onClick={props.onRemoveTodo} 
